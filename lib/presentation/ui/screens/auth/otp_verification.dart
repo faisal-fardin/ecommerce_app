@@ -46,7 +46,6 @@ class _OtpVerificationState extends State<OtpVerification> {
                   pinTheme: AppOTPStyle(),
                   enableActiveFill: true,
                   animationDuration: const Duration(milliseconds: 300),
-
                 ),
               ),
               SizedBox(
