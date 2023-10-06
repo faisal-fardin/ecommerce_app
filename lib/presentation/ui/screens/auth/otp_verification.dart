@@ -1,9 +1,11 @@
 
+import 'package:ecommerce/presentation/ui/screens/auth/complate_profile_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/app_color.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:ecommerce/style_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 
@@ -41,6 +43,8 @@ class _OtpVerificationState extends State<OtpVerification> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: PinCodeTextField(
+                  keyboardType: TextInputType.number,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   appContext: context,
                   length: 4,
                   pinTheme: AppOTPStyle(),
@@ -56,6 +60,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                   child: ElevatedButton(
                     style: buttonStyle(),
                     onPressed: () {
+                      Get.offAll(const ComplateProfileScreen());
                     },
                     child: const Text('Next' , style: TextStyle(fontSize: 22),),
                   ),

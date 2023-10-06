@@ -22,10 +22,15 @@ TextStyle subTitel() {
 InputDecoration appInputStyle(label) {
   return InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      fillColor: Colors.white,
-      enabledBorder: OutlineInputBorder(),
-      disabledBorder: OutlineInputBorder(),
-      border:  OutlineInputBorder(),
+      enabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey),
+      ),
+      disabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey),
+      ),
+      border:  OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey),
+      ),
       labelText:label ,
   );
 }
@@ -47,7 +52,7 @@ PinTheme AppOTPStyle() {
     inactiveFillColor: Colors.white,
     selectedColor: AppColor.primaryColor,
     activeColor: AppColor.primaryColor,
-    selectedFillColor: Colors.white,
+    selectedFillColor: AppColor.primaryColor,
     shape: PinCodeFieldShape.box,
     borderRadius: BorderRadius.circular(5),
     fieldHeight: 50,
