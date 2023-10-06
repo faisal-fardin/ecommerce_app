@@ -84,9 +84,8 @@ class _ComplateProfileScreenState extends State<ComplateProfileScreen> {
                     child: ElevatedButton(
                       style: buttonStyle(),
                       onPressed: () {
-                        Get.offAll(const OtpVerification());
                       },
-                      child: const Text('Complated' , style: TextStyle(fontSize: 22),),
+                      child: const Text('Completed' , style: TextStyle(fontSize: 22),),
                     ),
                   ),
                 ),

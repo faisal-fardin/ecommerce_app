@@ -28,7 +28,7 @@ InputDecoration appInputStyle(label) {
       disabledBorder: const OutlineInputBorder(
         borderSide: BorderSide(color: Colors.grey),
       ),
-      border:  OutlineInputBorder(
+      border:  const OutlineInputBorder(
         borderSide: BorderSide(color: Colors.grey),
       ),
       labelText:label ,
