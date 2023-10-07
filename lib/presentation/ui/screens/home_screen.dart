@@ -1,10 +1,11 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce/presentation/ui/utility/app_color.dart';
+
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
+import 'package:ecommerce/presentation/ui/widgets/categori_card.dart';
+import 'package:ecommerce/presentation/ui/widgets/circular_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../widgets/home/home_slider.dart';
+import '../widgets/home/section_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,48 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 40,
             ),
             const Spacer(),
-            InkWell(
-              onTap: () {},
-              borderRadius: BorderRadius.circular(40),
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.grey.shade300,
-                child: const Icon(
-                  Icons.person,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            InkWell(
-              onTap: () {},
-              borderRadius: BorderRadius.circular(40),
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.grey.shade300,
-                child: const Icon(
-                  Icons.call,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            InkWell(
-              onTap: () {},
-              borderRadius: BorderRadius.circular(40),
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.grey.shade300,
-                child: const Icon(
-                  Icons.notifications,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
+            CircularIconButton(icon: Icons.person, onTap: (){}),
+            const SizedBox(width: 10,),
+            CircularIconButton(icon: Icons.call, onTap: (){}),
+            const SizedBox(width: 10,),
+            CircularIconButton(icon: Icons.notifications, onTap: (){}),
           ],
         ),
       ),
@@ -104,6 +68,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               const HomeSlider(),
+              SectionHeader(
+                onTap: () {},
+                title: 'Categories',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 100,
+                child: ListView.builder(
+                  itemCount: 10,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return const CategoryCard();
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              SectionHeader(
+                onTap: () {},
+                title: 'Popular',
+              ),
             ],
           ),
         ),
@@ -111,3 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
+
