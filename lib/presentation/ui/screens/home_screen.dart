@@ -1,9 +1,12 @@
+import 'package:ecommerce/presentation/ui/screens/category_list_screen.dart';
+import 'package:ecommerce/presentation/ui/screens/product_list_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:ecommerce/presentation/ui/widgets/categori_card.dart';
 import 'package:ecommerce/presentation/ui/widgets/circular_icon_button.dart';
 import 'package:ecommerce/presentation/ui/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../widgets/home/home_slider.dart';
 import '../widgets/home/section_header.dart';
 
@@ -73,7 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const HomeSlider(),
               SectionHeader(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const CategoryListScreen());
+                },
                 title: 'Categories',
               ),
               const SizedBox(
@@ -93,7 +98,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               SectionHeader(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const ProductListScreen());
+                },
                 title: 'Popular',
               ),
               SizedBox(
@@ -110,7 +117,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               SectionHeader(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const ProductListScreen());
+                },
                 title: 'Special',
               ),
               SizedBox(
@@ -127,7 +136,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               SectionHeader(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const ProductListScreen());
+                },
                 title: 'New',
               ),
               SizedBox(

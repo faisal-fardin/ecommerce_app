@@ -1,6 +1,9 @@
 import 'package:ecommerce/presentation/ui/screens/home_screen.dart';
+import 'package:ecommerce/presentation/ui/screens/wish_list_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/app_color.dart';
 import 'package:flutter/material.dart';
+
+import 'category_list_screen.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
   const MainBottomNavScreen({super.key});
@@ -15,9 +18,9 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
 
   final List<Widget> _screen=[
     const HomeScreen(),
+    const CategoryListScreen(),
     const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
+    const WishListScreen(),
   ];
 
   @override
