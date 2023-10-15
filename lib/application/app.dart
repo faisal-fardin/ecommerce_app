@@ -1,3 +1,5 @@
+import 'package:ecommerce/application/state_holder_binder.dart';
+import 'package:ecommerce/presentation/state_holders/main_bottom_nav_controller.dart';
 import 'package:ecommerce/presentation/ui/screens/splash_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/app_color.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,7 @@ class CraftBay extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home:  const SplashScreen(),
+      initialBinding: StateBinder(),
       theme: ThemeData(
         textTheme: GoogleFonts.exo2TextTheme(),
         primarySwatch: MaterialColor(AppColor.primaryColor.value , AppColor().color),
@@ -20,3 +23,5 @@ class CraftBay extends StatelessWidget {
     );
   }
 }
+
+
