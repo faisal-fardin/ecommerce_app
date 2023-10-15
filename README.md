@@ -1,6 +1,6 @@
-# CraftyBay
+# ecommerce 
 
-A simple E-commerce app to implement pixel to flutter UI with full api implement
+A simple E-commerce app to implement pixel-to-flutter UI with full API implement
 
 ## Getting Started
 
