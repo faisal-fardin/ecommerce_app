@@ -1,4 +1,3 @@
-import 'package:ecommerce/presentation/ui/screens/category_list_screen.dart';
 import 'package:ecommerce/presentation/ui/screens/product_list_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:ecommerce/presentation/ui/widgets/categori_card.dart';
@@ -7,6 +6,7 @@ import 'package:ecommerce/presentation/ui/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import '../../state_holders/main_bottom_nav_controller.dart';
 import '../widgets/home/home_slider.dart';
 import '../widgets/home/section_header.dart';
 
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const HomeSlider(),
               SectionHeader(
                 onTap: () {
-                  Get.to(const CategoryListScreen());
+                  Get.find<MainBottomNavController>().changeScreen(1);
                 },
                 title: 'Categories',
               ),
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Get.to(const ProductListScreen());
                 },
-                title: 'Popular',
+                  title: 'Popular',
               ),
               SizedBox(
                 height: 170,
