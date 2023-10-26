@@ -24,24 +24,23 @@ class ProductReviewScreen extends StatelessWidget {
               backgroundColor: Colors.white,
               elevation: 0,
             ),
-
             Expanded(
-              child: ListView(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Card(
-                      child: ListTile(
-                        leading: Icon(Icons.person),
-                        title: Text('Faisal Fardin'),
-                        subtitle: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute '),
-                      ),
+                child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Card(
+                    child: ListTile(
+                      leading: Icon(Icons.person),
+                      title: Text('Faisal Fardin'),
+                      subtitle: Text(
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute '),
                     ),
-                  )
-                ],
-              ),
-            ),
-
+                  ),
+                );
+              },
+            )),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
@@ -65,7 +64,11 @@ class ProductReviewScreen extends StatelessWidget {
                     onPressed: () {
                       Get.to(const AddNewReview());
                     },
-                    child: const Icon(Icons.add, color: Colors.white, size: 30,),
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 30,
+                    ),
                   ),
                 ],
               ),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../utility/app_color.dart';
+import 'cart_screen.dart';
 import 'category_list_screen.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   final List<Widget> _screen = [
     const HomeScreen(),
     const CategoryListScreen(),
-    const HomeScreen(),
+    const CartScreen(),
     const WishListScreen(),
   ];
 
