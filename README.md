@@ -4,9 +4,12 @@ A simple E-commerce app to implement pixel-to-flutter UI with full API implement
 
 # features 
 
-Splash Screen
+Splash Screen.
+
 Home Screen
+
 Product Details Screen
+
 Login Screen
 Loading Screen
 Cart Screen
