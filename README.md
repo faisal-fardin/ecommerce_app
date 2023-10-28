@@ -11,17 +11,29 @@ Home Screen
 Product Details Screen
 
 Login Screen
+
 Loading Screen
+
 Cart Screen
+
 OTP Verify Screen
+
 Popular Product Screen
+
 Special Product Screen
+
 New Product Screen
+
 Reviews Screen
+
 Create Review Screen
+
 Wish List
+
 Categories List
+
 Complete Profile Screen
+
 About Dialog
 
 # Introduction This App
@@ -49,20 +61,19 @@ Users can update and manage their profile information, including personal detail
 
 # Libraries
 google_fonts: ^5.1.0
+
 flutter_svg: ^2.0.7
+
 get_storage: ^2.1.1
+
 carousel_slider: ^4.1.0
-eva_icons_flutter: ^3.1.0
-sizer: ^2.0.15
+
 get: ^4.6.5
+
 http: ^1.1.0
-shimmer: ^3.0.0
+
 pin_code_fields: ^8.0.1
-flutter_animate: ^4.2.0+1
-bottom_bar_matu: ^1.3.0
+
 cached_network_image: ^3.2.3
-device_preview: ^1.1.0
-motion_toast: ^2.7.8
-empty_widget: ^0.0.5
 
 
